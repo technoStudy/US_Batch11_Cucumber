@@ -8,3 +8,12 @@
 ** In Cucumber "Scenario" is a written description of a Feature from
 the end user perspective. Basically we are using for the TEST CASE
 Gherkin languages are using after the Scenario syntax (Given, When, Then, And)
+
+Given ===>> Set up the initial context or state before the action take place.
+it's describing the situation before anything happened.
+
+When ===>> Describes the specific action
+
+Then ===>> Describes "Expected Outcome"
+
+And  ===>> Can be use after any of the above keywords to add more steps

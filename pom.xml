@@ -13,6 +13,8 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+
+
  <dependencies>
 
      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -41,10 +43,6 @@
          <artifactId>cucumber-testng</artifactId>
          <version>7.11.2</version>
      </dependency>
-
-
-
-
 
 
  </dependencies>
