@@ -1,0 +1,27 @@
+
+
+** We created cucumber framework now need to add some dependencies
+  - Cucumber dependency
+  - Selenium dependency
+  - TestNG dependency
+  - Cucumber TestNG dependency
+
+** We will add some package for the framework
+  - page            ==>> for the locators  page classes
+  - features        ==>> for the feature files
+  - utilities       ==>> for the reusable method class, driver class etc.
+  - stepdefinitions ==>> stepdefinitions classes
+
+** create resources directory under the src
+  - we will add properties files in the resources
+
+** create first feature file under the features package
+What is Feature file : In cucumber "Feature" is a key component used to describe
+a specific functionality or aspect of the application being tested in readable and understandable format
+actually we are using feature for the user story ==> each user story should be added different fetaure file
+
+TestNG  ===> POM (Page Object Model)
+JUnit   ===> POM (Page Object Model)
+
+Cucumber ==>> BDD (Behavior Driven Development)
+Most Important Benefit of Cucumber ===> Non-technical team members and developers can understand (BA, PO, PM )

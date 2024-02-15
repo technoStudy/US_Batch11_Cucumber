@@ -1,0 +1,10 @@
+
+** Today we will start to test a real project
+-- The url is : https://test.mersys.io/
+-- username   : turkeyts
+-- password   : TechnoStudy123
+
+
+** In Cucumber "Scenario" is a written description of a Feature from
+the end user perspective. Basically we are using for the TEST CASE
+Gherkin languages are using after the Scenario syntax (Given, When, Then, And)
