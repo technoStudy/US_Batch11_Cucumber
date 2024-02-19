@@ -1,5 +1,6 @@
 package utilities;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hooks {
@@ -14,7 +15,13 @@ each scenario.
     @Before
     public void setUp(){
         // Set the browser type for the current thread
-        ThreadSafeDriver.threadBrowserName.set("browser");
+        ThreadSafeDriver.threadBrowserName.set(ConfigReader.getProperty("browser"));
+        ThreadSafeDriver.getDriver();
+    }
+
+    @After
+    public void tearDown(){
+        ThreadSafeDriver.quitDriver();
     }
 
 }
