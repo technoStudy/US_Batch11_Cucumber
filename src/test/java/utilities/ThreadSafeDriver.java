@@ -18,23 +18,24 @@ public class ThreadSafeDriver {
     // Each thread (think of a thread like a separate worker doing a job) gets its own notebook (web browser),
     // so they don't mix up or interfere with each other's work when running tests at the same time.
 
-    public static ThreadLocal<String> threadBrowserName=new ThreadLocal<>();
+    public static ThreadLocal<String> threadBrowserName=ThreadLocal.withInitial(() -> "chrome"); // default to chrome
+
     public static WebDriver getDriver() {
-
-
         Locale.setDefault(new Locale("EN"));//This sets the default locale for your Java Virtual Machine (JVM) to English.
         System.setProperty("user.language", "EN"); //This sets the user.language system property to "EN",
         // which tells the JVM to use English as the default language for this running instance.
 
-        if (threadBrowserName.get()==null)
-            threadBrowserName.set("chrome"); // default chrome
-
         if (threadDriver.get()==null) {
-
             switch (threadBrowserName.get()){
-                case "firefox": threadDriver.set(new FirefoxDriver()); break;
-                case "safari":  threadDriver.set(new SafariDriver());  break;
-                case "edge":    threadDriver.set(new EdgeDriver());    break;
+                case "firefox":
+                    threadDriver.set(new FirefoxDriver());
+                    break;
+                case "safari":
+                    threadDriver.set(new SafariDriver());
+                    break;
+                case "edge":
+                    threadDriver.set(new EdgeDriver());
+                    break;
                 default :
                     if (isRunningOnJenkins()) {
                         FirefoxOptions options = new FirefoxOptions();
@@ -44,7 +45,6 @@ public class ThreadSafeDriver {
                     else {
                         threadDriver.set(new ChromeDriver());
                     }
-
         }
         }
 

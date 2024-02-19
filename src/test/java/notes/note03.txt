@@ -1,0 +1,9 @@
+**** SLF4J
+--- Easy Integration : Easy setuo for the framework. It makes help to get message
+from the project. Just we add them in the framework. This makes sure all our logs foloow our rules,
+making everything simple manage.
+--- Performance : SLF4J is made to be quick and doesnt slow down our test.
+This is realy important for selenium tests to run smoothy and reliably
+
+**** LOG4J is a logging tool to our project. It helps
+keep track of what happens when our project runs
