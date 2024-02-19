@@ -66,9 +66,9 @@ public class ThreadSafeDriver {
            threadDriver.get().quit();
 
            WebDriver driver=threadDriver.get();
-           driver=null;  // null a eşitle
+           driver=null;
 
-           threadDriver.set(driver); // kendisine null olarak ver, bu hatta bir dolu driver yok
+           threadDriver.set(driver);
         }
     }
 
