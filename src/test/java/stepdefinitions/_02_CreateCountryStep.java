@@ -58,4 +58,15 @@ public class _02_CreateCountryStep {
         ReusableMethods.wait(1);
         Assert.assertEquals(setUpPage.successCountrySavedMessage.getText(), message);
     }
+
+
+    @Then("I should see the message {string} is created")
+    public void iShouldSeeTheMessageIsCreated(String countryName) {
+        ReusableMethods.wait(2);
+        System.out.println(setUpPage.countryExistMessage(countryName).getText());
+        Assert.assertEquals
+                (setUpPage.countryExistMessage(countryName).
+                        getText(),"The Country with Name \""+countryName+"\" already exists.");
+
+    }
 }

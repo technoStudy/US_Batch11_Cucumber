@@ -1,7 +1,9 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ThreadSafeDriver;
 
 public class SetUpPage extends ParentPage {
 
@@ -28,4 +30,13 @@ public class SetUpPage extends ParentPage {
     @FindBy(xpath = "//div[text()='Country successfully created']")
     public WebElement successCountrySavedMessage;
 
+
+    // If there is a dynamic xpath we should create a dynamic method for it
+    public WebElement countryExistMessage(String countryName) {
+      return ThreadSafeDriver.
+              getDriver().
+              findElement
+                      (By.xpath(
+                              "(//div[normalize-space()='The Country with Name \""+countryName+"\" already exists.'])[1]"));
+    }
 }
