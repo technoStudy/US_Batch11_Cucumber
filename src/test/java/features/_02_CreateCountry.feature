@@ -10,8 +10,8 @@ Feature: Campus Citizenship Addition
     And   I click the Parameters button
     And   I click the Countries button
     And   I click the add country icon
-    And   I enter "German" as the country name
-    And   I enter "German123" as the country code
+    And   I enter "Kiziloz" as the country name
+    And   I enter "kizil" as the country code
     And   I click the save button
     Then  I should see the message "Country successfully created"
 

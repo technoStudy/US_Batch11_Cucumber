@@ -21,6 +21,7 @@ each scenario.
 
     @After
     public void tearDown(){
+
         ThreadSafeDriver.quitDriver();
     }
 

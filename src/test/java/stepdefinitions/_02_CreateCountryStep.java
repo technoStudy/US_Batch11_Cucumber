@@ -35,23 +35,27 @@ public class _02_CreateCountryStep {
 
     @When("I enter {string} as the country name")
     public void i_enter_as_the_country_name(String countryName) {
+        ReusableMethods.wait(1);
         setUpPage.sendKeys(setUpPage.countryNameTextBox, countryName);
 
     }
 
     @When("I enter {string} as the country code")
     public void i_enter_as_the_country_code(String countryCode) {
+        ReusableMethods.wait(1);
         setUpPage.sendKeys(setUpPage.countryCodeTextBox, countryCode);
 
     }
 
     @When("I click the save button")
     public void i_click_the_save_button() {
+        ReusableMethods.wait(1);
         setUpPage.clickElement(setUpPage.saveCountryButton);
     }
 
     @Then("I should see the message {string}")
     public void i_should_see_the_message(String message) {
+        ReusableMethods.wait(1);
         Assert.assertEquals(setUpPage.successCountrySavedMessage.getText(), message);
     }
 }

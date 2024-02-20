@@ -16,10 +16,10 @@ public class SetUpPage extends ParentPage {
 
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[10]")
     public WebElement addCountryIcon;
-    @FindBy(xpath = "(//input[@id='ms-text-field-8'])[1]")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
     public WebElement countryNameTextBox;
 
-    @FindBy(xpath = "(//input[@id='ms-text-field-9'])[1]")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     public WebElement countryCodeTextBox ;
 
     @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon ng-star-inserted'])[1]")
