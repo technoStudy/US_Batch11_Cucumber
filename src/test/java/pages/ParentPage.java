@@ -59,6 +59,7 @@ public class ParentPage {
         }
 
         public void sendKeys(WebElement element, String key){
+
         element.sendKeys(key);
         }
     }
