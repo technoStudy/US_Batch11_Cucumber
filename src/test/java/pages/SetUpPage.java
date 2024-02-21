@@ -11,10 +11,10 @@ public class SetUpPage extends ParentPage {
     public WebElement setUpButton;
 
     @FindBy(xpath = "//span[text()='Parameters']")
-    public WebElement parametersButton ;
+    public WebElement parametersButton;
 
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
-    public WebElement countriesButton ;
+    public WebElement countriesButton;
 
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[10]")
     public WebElement addCountryIcon;
@@ -22,7 +22,7 @@ public class SetUpPage extends ParentPage {
     public WebElement countryNameTextBox;
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
-    public WebElement countryCodeTextBox ;
+    public WebElement countryCodeTextBox;
 
     @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon ng-star-inserted'])[1]")
     public WebElement saveCountryButton;
@@ -33,11 +33,11 @@ public class SetUpPage extends ParentPage {
 
     // If there is a dynamic xpath we should create a dynamic method for it
     public WebElement countryExistMessage(String countryName) {
-      return ThreadSafeDriver.
-              getDriver().
-              findElement
-                      (By.xpath(
-                              "(//div[normalize-space()='The Country with Name \""+countryName+"\" already exists.'])[1]"));
+        return ThreadSafeDriver.
+                getDriver().
+                findElement
+                        (By.xpath(
+                                "(//div[normalize-space()='The Country with Name \"" + countryName + "\" already exists.'])[1]"));
     }
 
     @FindBy(xpath = "(//*[name()='svg'][@class='svg-inline--fa fa-user-tag fa-fw'])[1]")
@@ -64,8 +64,9 @@ public class SetUpPage extends ParentPage {
                 getDriver().
                 findElement
                         (By.xpath(
-                                "//div[text()='The Citizenship with Name \""+citizenName+"\" already exists.']"));
+                                "//div[text()='The Citizenship with Name \"" + citizenName + "\" already exists.']"));
     }
+
 
 
 
