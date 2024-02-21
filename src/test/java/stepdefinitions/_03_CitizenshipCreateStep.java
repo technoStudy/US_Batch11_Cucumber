@@ -41,6 +41,7 @@ public class _03_CitizenshipCreateStep {
 
     @Then("I should see the {string} message")
     public void iShouldSeeTheMessage(String message) {
+        ReusableMethods.wait(1);
         Assert.assertEquals(setUpPage.addingCitizenSuccessfullyMessage.getText(),message);
     }
 }

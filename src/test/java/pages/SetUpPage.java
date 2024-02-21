@@ -58,4 +58,16 @@ public class SetUpPage extends ParentPage {
     @FindBy(xpath = "//div[text()='Citizenship successfully created']")
     public WebElement addingCitizenSuccessfullyMessage;
 
+
+    public WebElement citizenExistMessage(String citizenName) {
+        return ThreadSafeDriver.
+                getDriver().
+                findElement
+                        (By.xpath(
+                                "//div[text()='The Citizenship with Name \""+citizenName+"\" already exists.']"));
+    }
+
+
+
+
 }

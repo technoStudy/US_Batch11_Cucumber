@@ -9,7 +9,7 @@ Feature: Campus Citizenship Addition
     And   I click the Parameters button
     And   I click the Citizenship button
     And   I click add the citizenship icon
-    And   I enter "name" in the name text box
-    And   I enter "short_name" in the shortname text box
+    And   I enter "FromXyzdsad" in the name text box
+    And   I enter "xyz123ab12" in the shortname text box
     And   I click on the save button
-    Then  I should see the "Citizenship successfuly created" message
+    Then  I should see the "Citizenship successfully created" message
