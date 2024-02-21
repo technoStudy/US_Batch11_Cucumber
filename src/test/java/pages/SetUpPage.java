@@ -39,4 +39,23 @@ public class SetUpPage extends ParentPage {
                       (By.xpath(
                               "(//div[normalize-space()='The Country with Name \""+countryName+"\" already exists.'])[1]"));
     }
+
+    @FindBy(xpath = "(//*[name()='svg'][@class='svg-inline--fa fa-user-tag fa-fw'])[1]")
+    public WebElement citizenshipButton;
+
+    @FindBy(xpath = "//button[@matbadgeoverlap='false']")
+    public WebElement citizenshipAddingIcon;
+
+    @FindBy(xpath = "(//input[@type='text'])[3]")
+    public WebElement citizenNameTextBox;
+
+    @FindBy(xpath = "(//input[@type='text'])[4]")
+    public WebElement citizenshortNameTextBox;
+
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement addingCitizenSaveButton;
+
+    @FindBy(xpath = "//div[text()='Citizenship successfully created']")
+    public WebElement addingCitizenSuccessfullyMessage;
+
 }

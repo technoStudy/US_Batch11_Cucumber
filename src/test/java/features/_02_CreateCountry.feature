@@ -10,8 +10,8 @@ Feature: Campus Citizenship Addition
     And   I click the Parameters button
     And   I click the Countries button
     And   I click the add country icon
-    And   I enter "BigIsland" as the country name
-    And   I enter "island123" as the country code
+    And   I enter "Istanbul" as the country name
+    And   I enter "Istanbul" as the country code
     And   I click the save button
     Then  I should see the message "Country successfully created"
 
