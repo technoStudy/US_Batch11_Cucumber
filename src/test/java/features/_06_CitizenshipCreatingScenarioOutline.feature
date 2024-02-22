@@ -14,8 +14,8 @@ Feature:
     And   I enter citizen "<name>" in the name text box
     And   I enter citizen short name "<short_name>" in the shortname text box
     And   I click on the save button
-    Then  I should see the messge "<message>"
-    And   I enter "<name>" in the serach citizen text box
+    Then  I should see the successfully message "<message>"
+    And   I enter "<name>" in the search citizen text box
     And   I click on the search citizen button
     And   I click on the delete citizen button
     And   I click on the confirm delete citizen button
