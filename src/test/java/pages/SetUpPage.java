@@ -68,6 +68,20 @@ public class SetUpPage extends ParentPage {
     }
 
 
+    @FindBy(xpath = "//input[@id='ms-text-field-0']")
+    public WebElement citizenNameSearchTextBox;
+
+    @FindBy(xpath = "//span[text()='Search']")
+    public WebElement citizenNameSearchButton;
+
+    @FindBy(xpath = "//button[@color='warn']")
+    public WebElement citizenNameDeleteButton ;
+
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    public WebElement citizenNameConfirmDeleteButton ;
+
+    @FindBy(xpath = "//div[text()='Citizenship successfully deleted']")
+    public WebElement citizenSuccessfullyDeletedMessage ;
 
 
 

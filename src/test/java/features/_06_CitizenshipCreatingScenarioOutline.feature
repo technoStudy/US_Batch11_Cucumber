@@ -21,12 +21,12 @@ Feature:
     And   I click on the confirm delete citizen button
     And   I should see the deleted "<deleted_message>"
     Examples:
-      | name    | short_name | message                          |
-      | Wqrst01 | w1qe01     | Citizenship successfully created |
-      | Wqrst02 | w1qe02     | Citizenship successfully created |
-      | Wqrst03 | w1qe03     | Citizenship successfully created |
-      | Wqrst05 | w1qe04     | Citizenship successfully created |
-      | Wqrst06 | w1qe05     | Citizenship successfully created |
+      | name    | short_name | message                          |deleted_message|
+      | ABCxq01 | w1qe01     | Citizenship successfully created |Citizenship successfully deleted|
+      | ABCxq02 | w1qe02     | Citizenship successfully created |Citizenship successfully deleted|
+      | ABCxq03 | w1qe03     | Citizenship successfully created |Citizenship successfully deleted|
+      | ABCxq04 | w1qe04     | Citizenship successfully created |Citizenship successfully deleted|
+      | ABCxq05 | w1qe05     | Citizenship successfully created |Citizenship successfully deleted|
 
 
     # The best quality of a good tester is CLEANING UP after themselves...
