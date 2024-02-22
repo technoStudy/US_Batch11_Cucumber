@@ -14,12 +14,19 @@ Feature:
     And   I enter citizen "<name>" in the name text box
     And   I enter citizen short name "<short_name>" in the shortname text box
     And   I click on the save button
-    Then  I should see the "Citizenship successfully created" message
+    Then  I should see the messge "<message>"
+    And   I enter "<name>" in the serach citizen text box
+    And   I click on the search citizen button
+    And   I click on the delete citizen button
+    And   I click on the confirm delete citizen button
+    And   I should see the deleted "<deleted_message>"
     Examples:
-      | name    | short_name   |
-      | Wqrst01 | w1qe01       |
-      | Wqrst02 | w1qe02       |
-      | Wqrst03 | w1qe03       |
-      | Wqrst05 | w1qe04       |
-      | Wqrst06 | w1qe05       |
+      | name    | short_name | message                          |
+      | Wqrst01 | w1qe01     | Citizenship successfully created |
+      | Wqrst02 | w1qe02     | Citizenship successfully created |
+      | Wqrst03 | w1qe03     | Citizenship successfully created |
+      | Wqrst05 | w1qe04     | Citizenship successfully created |
+      | Wqrst06 | w1qe05     | Citizenship successfully created |
 
+
+    # The best quality of a good tester is CLEANING UP after themselves...
