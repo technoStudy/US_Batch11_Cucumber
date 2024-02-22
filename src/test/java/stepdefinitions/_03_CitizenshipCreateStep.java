@@ -44,4 +44,35 @@ public class _03_CitizenshipCreateStep {
         ReusableMethods.wait(1);
         Assert.assertEquals(setUpPage.addingCitizenSuccessfullyMessage.getText(),message);
     }
+
+    @And("I enter name {string} in the name text box")
+    public void iEnterNameInTheNameTextBox(String name) {
+        ReusableMethods.wait(1);
+        setUpPage.sendKeys(setUpPage.citizenNameTextBox,name);
+    }
+
+    @And("I enter shortname {string} in the shortname text box")
+    public void iEnterShortnameInTheShortnameTextBox(String shortname) {
+        ReusableMethods.wait(1);
+        setUpPage.sendKeys(setUpPage.citizenshortNameTextBox,shortname);
+    }
+
+    @Then("I should see the warning {string} message")
+    public void iShouldSeeTheWarningMessage(String message) {
+        ReusableMethods.wait(1);
+        Assert.assertEquals(setUpPage.addingCitizenSuccessfullyMessage.getText(),message);
+    }
+
+
+    @And("I enter citizen {string} in the name text box")
+    public void iEnterCitizenInTheNameTextBox(String name) {
+        ReusableMethods.wait(2);
+        setUpPage.sendKeys(setUpPage.citizenNameTextBox,name);
+    }
+
+    @And("I enter citizen short name {string} in the shortname text box")
+    public void iEnterCitizenShortNameInTheShortnameTextBox(String short_name) {
+        ReusableMethods.wait(2);
+        setUpPage.sendKeys(setUpPage.citizenshortNameTextBox,short_name);
+    }
 }

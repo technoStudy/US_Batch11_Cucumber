@@ -12,3 +12,4 @@ Feature: Scenario Outline
       | Hamza   | Gokce   | 13 | 11.5  | 21      | 2000000 |
       | Hanna   | Kvitko  | 13 | 10.5  | 31      | 5000000 |
       | Tetiana | Khok    | 12 | 12.5  | 41      | 1000000 |
+
