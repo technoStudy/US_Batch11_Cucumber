@@ -83,6 +83,17 @@ public class SetUpPage extends ParentPage {
     @FindBy(xpath = "//div[text()='Citizenship successfully deleted']")
     public WebElement citizenSuccessfullyDeletedMessage ;
 
-
+// we create a method to put some webelements to read in the DataTable
+    public WebElement countryCreatingElements(String nameOfWebelement){
+        switch (nameOfWebelement){
+            case "setup" : return this.setUpButton;
+            case "parameter" : return this.parametersButton;
+            case "countries" : return this.countriesButton;
+            case "addingCountryIcon" : return this.addCountryIcon;
+            case "countryNametextBox" : return this.countryNameTextBox;
+            case "countryCodeTextBox" : return this.countryCodeTextBox;
+        }
+        return  null ;
+    }
 
 }

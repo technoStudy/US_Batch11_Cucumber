@@ -4,6 +4,7 @@ package stepdefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.LoginPage;
 import pages.SetUpPage;
@@ -92,6 +93,27 @@ public class _02_CreateCountryCampusStep {
                         getText(), "The Country with Name \"" + countryName + "\" already exists.");
 
     }
+
+    @Then("I click on the element in left navigation")
+    public void i_click_on_the_element_in_left_navigation(DataTable webelements) {
+     List<String> buttonList = webelements.asList(String.class);
+     for(int i = 0 ; i<buttonList.size(); i++){
+         WebElement element = setUpPage.countryCreatingElements(buttonList.get(i));
+         ReusableMethods.wait(1);
+         setUpPage.clickElement(element);
+     }
+    }
+
+    @Then("I enter the name and code in the text box")
+    public void i_enter_the_name_and_code_in_the_text_box(DataTable webelementsAndData) {
+        List<List<String>> items = webelementsAndData.asLists(String.class);
+        for (int i =0; i< items.size();i++){
+            WebElement element = setUpPage.countryCreatingElements(items.get(i).get(0));
+            String textData = items.get(i).get(1);
+            setUpPage.sendKeys(element,textData);
+        }
+    }
+
 
 
 
