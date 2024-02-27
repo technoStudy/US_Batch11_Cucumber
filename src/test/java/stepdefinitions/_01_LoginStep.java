@@ -40,7 +40,7 @@ public class _01_LoginStep {
 
     @Then("User should login successfully")
     public void user_should_login_successfully() {
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(2);
         loginPage.isWebElementDisplayed(loginPage.technoStudyImage);
 
     }

@@ -1,6 +1,6 @@
 Feature:US01 Login Functionality
 
-  @SmokeTest
+  @Login
   Scenario: TC01 Login with valid username and password
 
     Given Navigate to Campus

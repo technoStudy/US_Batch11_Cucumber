@@ -16,6 +16,7 @@ Feature: Campus Citizenship Addition
     Then  I should see the message "Country successfully created"
 
     # using with a text "testData" means test data we can change from the feature
+
   Scenario: TC02 Adding an existing country
     Given Navigate to Campus
     When  Enter username and password in the text boxes

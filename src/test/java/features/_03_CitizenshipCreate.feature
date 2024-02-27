@@ -1,5 +1,6 @@
 Feature: Campus Citizenship Addition
 
+  @SmokeTest
   Scenario: Adding a new citizenship successfully
     Given Navigate to Campus
     When  Enter username and password in the text boxes
