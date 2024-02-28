@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import pages.LoginPage;
 import pages.SetUpPage;
 import utilities.ReusableMethods;
 
@@ -98,7 +97,7 @@ public class _02_CreateCountryCampusStep {
     public void i_click_on_the_element_in_left_navigation(DataTable webelements) {
      List<String> buttonList = webelements.asList(String.class);
      for(int i = 0 ; i<buttonList.size(); i++){
-         WebElement element = setUpPage.countryCreatingElements(buttonList.get(i));
+         WebElement element = setUpPage.getWebElements(buttonList.get(i));
          ReusableMethods.wait(1);
          setUpPage.clickElement(element);
      }
@@ -108,7 +107,7 @@ public class _02_CreateCountryCampusStep {
     public void i_enter_the_name_and_code_in_the_text_box(DataTable webelementsAndData) {
         List<List<String>> items = webelementsAndData.asLists(String.class);
         for (int i =0; i< items.size();i++){
-            WebElement element = setUpPage.countryCreatingElements(items.get(i).get(0));
+            WebElement element = setUpPage.getWebElements(items.get(i).get(0));
             String textData = items.get(i).get(1);
             setUpPage.sendKeys(element,textData);
         }

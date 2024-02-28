@@ -75,25 +75,65 @@ public class SetUpPage extends ParentPage {
     public WebElement citizenNameSearchButton;
 
     @FindBy(xpath = "//button[@color='warn']")
-    public WebElement citizenNameDeleteButton ;
+    public WebElement citizenNameDeleteButton;
 
     @FindBy(xpath = "//span[text()=' Delete ']")
-    public WebElement citizenNameConfirmDeleteButton ;
+    public WebElement citizenNameConfirmDeleteButton;
 
     @FindBy(xpath = "//div[text()='Citizenship successfully deleted']")
-    public WebElement citizenSuccessfullyDeletedMessage ;
+    public WebElement citizenSuccessfullyDeletedMessage;
 
-// we create a method to put some webelements to read in the DataTable
-    public WebElement countryCreatingElements(String nameOfWebelement){
-        switch (nameOfWebelement){
-            case "setup" : return this.setUpButton;
-            case "parameter" : return this.parametersButton;
-            case "countries" : return this.countriesButton;
-            case "addingCountryIcon" : return this.addCountryIcon;
-            case "countryNametextBox" : return this.countryNameTextBox;
-            case "countryCodeTextBox" : return this.countryCodeTextBox;
+    @FindBy(xpath = "//span[text()='Fees']")
+    public WebElement feesButton;
+    @FindBy(xpath = "//button[@matbadgeoverlap='false']")
+    public WebElement addingFeesIcon;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
+    public WebElement nameTextBoxFeesAdding;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    public WebElement codeTextBoxFeesAdding;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    public WebElement intergationCodeAddingFees;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    public WebElement priorityCodeAddingFees;
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
+    public WebElement toggleBarAddingFees;
+
+    @FindBy(xpath = "//span[text()='Save & Close']")
+    public WebElement saveAndCloseAddingFeesButton;
+
+    @FindBy(xpath = "//div[text()='Fee Type successfully updated']")
+    public WebElement saveAndClosemessageSuccessfully;
+
+    // we create a method to put some webelements to read in the DataTable
+    public WebElement getWebElements(String nameOfWebelement) {
+        switch (nameOfWebelement) {
+            case "setup":
+                return this.setUpButton;
+            case "parameter":
+                return this.parametersButton;
+            case "countries":
+                return this.countriesButton;
+            case "addingCountryIcon":
+                return this.addCountryIcon;
+            case "countryNametextBox":
+                return this.countryNameTextBox;
+            case "countryCodeTextBox":
+                return this.countryCodeTextBox;
+            case "fees":
+                return this.feesButton;
+            case "addFeesIcon":
+                return this.addingFeesIcon;
+            case "nameTextBoxFeesAdding":
+                return this.nameTextBoxFeesAdding;
+            case "codeTextBoxFeesAdding":
+                return this.codeTextBoxFeesAdding;
+            case "intergationCodeAddingFees":
+                return this.intergationCodeAddingFees;
+            case "priorityCodeAddingFees" : return this.priorityCodeAddingFees;
+            case "toggleBarAddingFees" : return this.toggleBarAddingFees;
         }
-        return  null ;
+        return null;
     }
 
 }
