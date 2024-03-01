@@ -12,6 +12,9 @@ each scenario.
     // we will create here to use different browser
     // if you wish you can create driver methods in this class
     // we should import from the io.cucumber.java
+
+
+  /*
     @Before
     public void setUp(){
         // Set the browser type for the current thread
@@ -24,5 +27,5 @@ each scenario.
 
         ThreadSafeDriver.quitDriver();
     }
-
+*/
 }

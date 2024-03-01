@@ -6,6 +6,7 @@ Feature: Create Country with DataTable
     And   click login button
     Then  User should login successfully
 
+  @Regression
   Scenario: Create a new Country
     And I click on the element in left navigation
       | setup             |
