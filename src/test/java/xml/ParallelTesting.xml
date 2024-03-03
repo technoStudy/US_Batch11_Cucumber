@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MySuit" parallel="tests" thread-count="2">
-
     <test name="parallelTest01">
         <parameter name="browserType" value="edge"></parameter>
         <classes>
@@ -8,14 +8,10 @@
         </classes>
     </test>
 
-
     <test name="parallelTest02">
         <parameter name="browserType" value="firefox"></parameter>
         <classes>
             <class name="runners._05_ParallelTestRunner"></class>
         </classes>
     </test>
-
-    
-    
 </suite>

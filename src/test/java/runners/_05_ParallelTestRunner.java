@@ -13,14 +13,15 @@ import utilities.ThreadSafeDriver;
 @CucumberOptions(
         features = {"src/test/java/features"},// path of features packages
         glue = {"stepdefinitions","anotherPackageIfNecassary"},
-        tags = "@Login",
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:DIR|FILE|URL"}
+        tags = "@SmokeTest",
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
 public class _05_ParallelTestRunner extends AbstractTestNGCucumberTests {
     @BeforeClass
     @Parameters("browserType")
-    public void setUpClass(@Optional("defaultBrowser") String browserName){
+    public void setUpClass(String browserName){
+        System.out.println("Browser parameter received: " + browserName);
         ThreadSafeDriver.threadBrowserName.set(browserName);
     }
 

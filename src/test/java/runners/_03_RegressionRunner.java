@@ -5,9 +5,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
+        tags = "@Regression",
         features = {"src/test/java/features"},// path of features packages
         glue = {"stepdefinitions"},
-        tags = "@Regression"
+        plugin= {"json:target/cucumber/cucumber.json"}
+
+
 )
 
 
