@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
@@ -34,6 +35,9 @@ public class ThreadSafeDriver {
                     break;
                 case "edge":
                     threadDriver.set(new EdgeDriver());
+                    break;
+                case "internetExplorer":
+                    threadDriver.set(new InternetExplorerDriver());
                     break;
                 default :
                     if (isRunningOnJenkins()) {

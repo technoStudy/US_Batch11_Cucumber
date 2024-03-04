@@ -21,7 +21,6 @@ public class _01_LoginStep {
         ThreadSafeDriver.getDriver().get("https://test.mersys.io/");
 
     }
-
     @When("Enter username and password in the text boxes")
     public void enter_username_and_password_in_the_text_boxes()  {
         ReusableMethods.wait(1);

@@ -30,7 +30,6 @@ public class SetUpPage extends ParentPage {
     @FindBy(xpath = "//div[text()='Country successfully created']")
     public WebElement successCountrySavedMessage;
 
-
     // If there is a dynamic xpath we should create a dynamic method for it
     public WebElement countryExistMessage(String countryName) {
         return ThreadSafeDriver.

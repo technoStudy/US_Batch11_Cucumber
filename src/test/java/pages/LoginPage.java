@@ -25,6 +25,8 @@ public class LoginPage extends ParentPage {
     @FindBy(xpath = "(//img[@class='logo-icon'])[1]")
     public WebElement technoStudyImage;
 
+    @FindBy(xpath = "//div[text()='Invalid username or password']")
+    public WebElement warningMessage;
 
 
 

@@ -9,8 +9,6 @@ import io.cucumber.testng.CucumberOptions;
         features = {"src/test/java/features"},// path of features packages
         glue = {"stepdefinitions"},
         plugin= {"json:target/cucumber/cucumber.json"}
-
-
 )
 
 

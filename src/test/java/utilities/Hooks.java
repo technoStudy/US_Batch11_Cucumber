@@ -14,14 +14,12 @@ each scenario.
     // if you wish you can create driver methods in this class
     // we should import from the io.cucumber.java
 
-
     @Before
     public void setUp(){
         // Set the browser type for the current thread
         ThreadSafeDriver.threadBrowserName.set(ConfigReader.getProperty("browser"));
         ThreadSafeDriver.getDriver();
     }
-
     @After
     public void tearDown(){
 

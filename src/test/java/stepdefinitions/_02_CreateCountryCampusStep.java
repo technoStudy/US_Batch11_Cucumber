@@ -2,12 +2,14 @@ package stepdefinitions;
 
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.SetUpPage;
 import utilities.ReusableMethods;
+import utilities.ThreadSafeDriver;
 
 import java.util.List;
 import java.util.Map;
