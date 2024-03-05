@@ -46,7 +46,7 @@ public class _02_PrintAllData {
         for (int i = 0; i<sheetWithIndex.getPhysicalNumberOfRows();i++){
 
             for (int j = 0 ; j<sheetWithIndex.getRow(i).getPhysicalNumberOfCells();j++){
-                System.out.println(sheetWithIndex.getRow(i).getCell(j)+ " \t");
+                System.out.print(sheetWithIndex.getRow(i).getCell(j)+ " \t");
             }
             System.out.println();
         }
