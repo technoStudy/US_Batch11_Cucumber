@@ -22,11 +22,11 @@ public class _01_ApachePOIStart {
         Workbook workbook = WorkbookFactory.create(fileInputStream);
 
         // 4th step There are many sheets in the Excel, we should define to work on it
-        Sheet sheetFirst = workbook.getSheet("Sheet1");
+        Sheet sheetFirst = workbook.getSheet("batch11");
 
         // to get Row 1
         Row firstRow = sheetFirst.getRow(1);// first index
-        Cell cell = firstRow.getCell(1); // first index
+        Cell cell = firstRow.getCell(0); // first index
         System.out.println("Cell :"+cell);
     }
 
