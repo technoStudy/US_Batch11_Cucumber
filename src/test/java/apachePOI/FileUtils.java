@@ -103,8 +103,26 @@ public class FileUtils {
     // when we want to print data from the file, it is better to create method with list
     // if we put in the list we can use data in our test scenario
 
-    public ArrayList<ArrayList<Object>> getDataList(String path, String sheetName,int row){
-
+    public ArrayList<ArrayList<Object>> getDataList(String path, String sheetName,int columnNum){
+      ArrayList<ArrayList<Object>> tableList = new ArrayList<>();
+      FileInputStream fileInputStream = null;
+      Workbook workbook = null;
+      Sheet sheet = null;
+        try {
+          fileInputStream = new FileInputStream(path);
+          workbook = WorkbookFactory.create(fileInputStream);
+          sheet = workbook.getSheet(sheetName);
+      }catch (IOException e){
+          e.printStackTrace();
+      }
+        for (int i = 0; i<sheet.getPhysicalNumberOfRows();i++){
+            ArrayList<Object> rowList = new ArrayList<>();
+            for (int j = 0; j<columnNum; j++){
+                rowList.add(sheet.getRow(i).getCell(j).toString());
+            }
+            tableList.add(rowList);
+        }
+        return tableList;
     }
 
 }
