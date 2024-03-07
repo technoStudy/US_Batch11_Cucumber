@@ -44,4 +44,34 @@ public class TestDataUsingApochePOI {
         }
         return testData.iterator();
     }
+
+    @DataProvider(name="feesData")
+    public Iterator<Object[]> feesDataProvider(){
+        List<Object[]> testData = new ArrayList<>();
+        String path = "src/test/resources/files/feesData.xlsx";
+        FileInputStream fis = null;
+        Workbook workbook = null;
+        Sheet sheet = null;
+        try {
+            fis = new FileInputStream(path);
+            workbook = new XSSFWorkbook(fis);
+            sheet = workbook.getSheetAt(0);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        for (Row row: sheet){
+            Cell nameCell = row.getCell(0);
+            Cell codeCell = row.getCell(1);
+            Cell integrationCodeCell = row.getCell(2);
+            Cell priorityCell = row.getCell(3);
+
+            String name = nameCell.getStringCellValue();
+            String code = codeCell.getStringCellValue();
+            String integrationCode = integrationCodeCell.getStringCellValue();
+            String priority = priorityCell.getStringCellValue();
+
+            testData.add(new Object[]{name,code,integrationCode,priority}) ;
+        }
+        return testData.iterator();
+    }
 }
