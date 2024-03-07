@@ -3,7 +3,8 @@ Feature: Campus Citizenship Addition
   #Background: You use the keyword Background at the beginning of a feature file
   # followwed by the steps that need to be executed before each scenario
  # Background like a Before method in the TestNG
-  Background:
+
+  Background: Login Campus
     Given Navigate to Campus
     When  Enter username and password in the text boxes
     And   click login button

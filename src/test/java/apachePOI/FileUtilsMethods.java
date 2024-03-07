@@ -3,6 +3,7 @@ package apachePOI;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import org.apache.poi.ss.usermodel.*;
+import org.testng.annotations.Test;
 
 
 import java.io.FileInputStream;
@@ -10,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class FileUtils {
+public class FileUtilsMethods {
 
 
     public void printCellData(String path, String sheet, int rowNum, int cellNum) {
@@ -125,6 +126,11 @@ public class FileUtils {
         return tableList;
     }
 
+
+    @Test
+    public void test01(){
+
+    }
 }
 
 
