@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-public class ExcelTest {
+public class _03_ExcelTest {
     String path = "src/test/resources/files/NegativeTestData.xlsx";
     String resultPath = "src/test/resources/files/Result.xlsx";
     String sampleDataPath = "src/test/resources/files/sample_data.csv";
